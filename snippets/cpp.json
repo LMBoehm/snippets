@@ -1,0 +1,11 @@
+{
+  "for_": {
+    "prefix": "for_",
+    "body": [
+      "std::for_each(std::begin($1), std::end($1), [&](const auto& ${2:e}) {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Code snippet for for_each algorithm"
+  }
+}
