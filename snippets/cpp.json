@@ -7,5 +7,14 @@
       "});"
     ],
     "description": "Code snippet for for_each algorithm"
+  },
+  "accumulate": {
+    "prefix": "acc",
+    "body": [
+      "std::accumulate(std::begin($1), std::end($1), ${2:0}, [&](const auto& ${3:e}) {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Code snippet for accumulate algorithm"
   }
 }
