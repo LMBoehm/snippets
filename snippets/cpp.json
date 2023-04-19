@@ -6,7 +6,7 @@
       "\t$0",
       "});"
     ],
-    "description": "Code snippet for for_each algorithm"
+    "description": "for_each algorithm"
   },
   "accumulate": {
     "prefix": "acc",
@@ -15,6 +15,67 @@
       "\t$0",
       "});"
     ],
-    "description": "Code snippet for accumulate algorithm"
+    "description": "accumulate algorithm"
+  },
+  "none_of": {
+    "prefix": "none",
+    "body": [
+      "const auto $1 = std::none_of(std::begin($2), std::end($2), [&](const auto& ${3:e}) {",
+      "\t$0",
+      "});"
+    ],
+    "description": "none_of algorithm"
+  },
+  "all_of": {
+    "prefix": "all",
+    "body": [
+      "const auto $1 = std::all_of(std::begin($2), std::end($2), [&](const auto& ${3:e}) {",
+      "\t$0",
+      "});"
+    ],
+    "description": "all_of algorithm"
+  },
+  "any_of": {
+    "prefix": "any",
+    "body": [
+      "const auto $1 = std::any_of(std::begin($2), std::end($2), [&](const auto& ${3:e}) {",
+      "\t$0",
+      "});"
+    ],
+    "description": "any_of algorithm"
+  },
+  "partition": {
+    "prefix": "partition",
+    "body": [
+      "const auto it = std::partition(std::begin($1), std::end($1), [&](const auto& ${2:e}) {",
+      "\t$0 // returns it to first element where p is false",
+      "});"
+    ],
+    "description": "partition algorithm"
+  },
+  "lower_bound": {
+    "prefix": "lower_bound",
+    "body": [
+      "const auto it = std::lower_bound(std::cbegin($1), std::cend($1), $2, [&](const auto& ${2:e}, const auto val) {",
+      "\t${0:return e < val;} // returns it to the first element in the range where p is false",
+      "});"
+    ],
+    "description": "partition algorithm"
+  },
+  "find_if": {
+    "prefix": "find_if",
+    "body": [
+      "const auto it = std::find_if(std::begin($1), std::end($1), ${2:0}, [&](const auto& ${3:e}) {",
+      "\t$0",
+      "});"
+    ],
+    "description": "find_if algorithm"
+  },
+  "find": {
+    "prefix": "find",
+    "body": [
+      "const auto it = std::find(std::begin($1), std::end($1), ${2:0});"
+    ],
+    "description": "find algorithm"
   }
 }
